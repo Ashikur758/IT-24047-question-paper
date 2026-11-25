@@ -1,4 +1,7 @@
-## Question PDF Link :  Software_Design_Question_Paper (1).pdf
+## Question PDF Link :  [Software_Design_Question_Paper (1).pdf](https://github.com/Ashikur758/IT-24047-question-paper/blob/main/Software_Design_Question_Paper%20(1).pdf)
+
+
+
 
 
 **Answer all 4 (Four) questions.**
