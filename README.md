@@ -1,4 +1,6 @@
-## Question PDF Link : 
+## Question PDF Link :  Software_Design_Question_Paper (1).pdf
+
+
 **Answer all 4 (Four) questions.**
 
 | Q | | Question | Marks | Level | CLO |
@@ -43,3 +45,84 @@ class OrderService {
     }
 }
 ```
+
+
+
+
+# Software Engineering and Project Management – Question Paper
+
+| Information | Details |
+|---|---|
+| Course Title | Software Engineering and Project Management |
+| Course Code | ICT 3107 |
+| Time | 1 Hour |
+| Total Marks | 40 |
+
+**Answer all 4 (Four) questions.**
+
+## Question Paper
+
+### Q1. Software Design
+
+**a)** Define *software design*. What is the input of the design process? List the two basic steps of the design process and state what each describes. **[4 Marks]**
+
+**b)** Define *coupling* and *cohesion*. Which one should be low and which one should be high in a good design? **[3 Marks]**
+
+**c)** Explain why recording the rationale of design decisions improves the maintainability of software. **[3 Marks]**
+
+### Q2. Architectural Design and Design Patterns
+
+**a)** Explain how the Model-View-Controller (MVC) style separates responsibilities. Describe the role of Model, View and Controller. **[4 Marks]**
+
+**b)** Distinguish between *Page Controller* and *Front Controller*. In which kind of website is each one suitable? **[3 Marks]**
+
+**c)** Name the three categories of GoF design patterns and give one example of each. **[3 Marks]**
+
+### Q3. Software Metrics
+
+**a)** Compute **LCOM** (show sets P and Q) and **LCOM2** for the `Book` class given below. Comment on its cohesion. **[6 Marks]**
+
+```java
+public class Book {
+    private String title, author;
+    private int copies;
+
+    public String getTitle()     { return title; }
+    public String getAuthor()    { return author; }
+    public void addCopies(int n) { copies += n; }
+    public boolean isAvailable() { return copies > 0; }
+}
+```
+
+**b)** Compute **CBO** and the McCabe version of **WMC** for the `OrderService` class given below (count only project classes). **[4 Marks]**
+
+```java
+class OrderService {
+    private Printer printer;
+    private Mailer mailer;
+
+    public void place(Order o) {
+        if (o == null) return;
+
+        if (o.isPaid()) {
+            mailer.send(o);
+            printer.print(o);
+        }
+        else System.out.println("Unpaid");
+    }
+
+    public void cancel(Order o) {
+        if (o != null) mailer.send(o);
+    }
+}
+```
+
+### Q4. Design Patterns and UI Design
+
+**a)** An online shop supports Card, bKash and PayPal payment, chosen at runtime. The `Checkout` class currently uses a long if-else chain. Name the GoF pattern that solves this, map its roles to the classes in this scenario with a class diagram, and state one benefit and one liability. **[6 Marks]**
+
+**b)** Explain any three UI design principles with one example each. **[4 Marks]**
+
+---
+
+**Total Marks: 40**
